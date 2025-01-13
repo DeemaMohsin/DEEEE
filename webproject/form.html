@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="courses/recipes/recipesstyling.css">
+        <title>Form</title>
+        <style>
+            body {
+                color: #322826;
+            }
+
+            .f1 {
+                background-color: #E3DCD4;
+                border-radius: 8px;
+                border-color: rgb(211, 195, 161);
+                border-style: solid;
+                padding: 15px 0px 30px 0px;
+                margin: 40px 450px 30px;
+                text-align: left;
+            }
+
+            h3 {
+                font-size: 25px;
+                padding-left: 10px;
+                text-align: left;
+            }
+
+            button {
+                color: #322826;
+                border: 2px solid rgb(211, 195, 161);
+                border-radius: 8px;
+                background-color: #d8c8b0;
+                padding: 3px 5px;
+                margin-left: 90px;
+            }
+
+            button:hover {
+                background-color: rgb(211, 195, 161);
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            var date = new Date();
+            window.alert("Time is : " + date.getTime() + "\nDate is : " + date.getDate());
+        </script>
+            <nav>
+                <h2 class="beanary">Beanary
+                    <a href="home/home.html" class="nav" style="margin-left: 720px; font-size: 20px;">Home</a>
+                    <a href="courses/courses.html" class="nav" style="margin-left: 20px; font-size: 20px;">Courses</a>
+                    <a href="success story/success.html" class="nav" style="margin-left: 20px; font-size: 20px;">Success stories</a>
+                    <a href="contact us/contactus.html" class="nav" style="margin-left: 20px; font-size: 20px;">Contact us</a>
+                    <a href="about us/aboutus.html" class="nav" style="margin-left: 20px; font-size: 20px;">About us</a>
+                    <a href="library/library.html" class="nav" style="margin-left: 20px; font-size: 20px;">Library</a>
+                    <a href="form.html" class="nav" style="margin-left: 20px; font-size: 20px;">Form</a>
+                </h2>
+            </nav>
+            <br>
+            <h3 style="font-size: 60px; text-align: center;">Form</h3>
+            <form method="post" onsubmit="return Info(event)">
+                <fieldset class="f1">
+                    <strong style="margin-left: 55px;">Name</strong>
+                    <br>
+                    <input id="name" type="text" name="name" required style="margin-left: 55px; padding-right: 320px;">
+                    <br><br>
+                    <strong style="margin-left: 55px;">Age</strong>
+                    <br>
+                    <input type="number" name="age" id="Age" required style="margin-left: 55px; padding-right: 320px;">
+                    <br>
+                    <span id="sp" style="color: red; padding-left: 55px;"></span>
+                    <br><br>
+                    <strong style="margin-left: 55px;">Your Favorite Drink Type</strong>
+                    <br>
+                    <datalist id="drink">
+                        <option value="Latte">
+                        <option value="Iced coffee">
+                        <option value="Mocha">
+                    </datalist>
+                    <input list="drink" id="drinks" style="margin-left: 55px; padding-right: 320px;">
+                    <br><br>
+                    <strong style="margin-left: 55px;">Data</strong>
+                    <br>
+                    <textarea id="show" name="txt" rows="18" cols="65" style="margin-left: 55px; margin-right: 40px;"></textarea>
+                    <br><br>
+                    <button type="submit">Submit</button>
+                </fieldset>
+            </form>
+        </div>
+
+        <script>
+            function Info(event) {
+                event.preventDefault(); // Prevent form submission
+
+                var name = document.getElementById("name").value;
+                var age = document.getElementById("Age").value;
+                var favDrink = document.getElementById("drinks").value;
+                var drinks = ["Latte" , "latte", "Iced coffee","iced coffee", "Mocha" , "mocha"];
+                var d = "Name: " + name + "\nYour favorite drink type is: " + favDrink + "\nSome recommended drinks for your favorite type:";
+
+                // Recommended drinks based on the selected favorite drink
+                if (favDrink == drinks[0] || favDrink == drinks[1]) {
+                    d += "\nLatte, Salted caramel latte, Biscuit iced latte.";
+                } else if (favDrink == drinks[2] || favDrink == drinks[3]) {
+                    d += "\nBanana iced coffee, cacao iced coffee, Sweet iced coffee.";
+                } else if (favDrink == drinks[4] || favDrink == drinks[5]) {
+                    d += "\nBlack cacao mocha, Caramel iced mocha, Cookies and cream mocha, Pistachio mocha.";
+                } else {
+                    d += "\nNo recommended drinks yet.";
+                }
+
+                // Caffeine limit based on age
+                d += "\nAge: " + age;
+                if (age >= 5 && age <= 12) {
+                    d += "\nCaffeine is not recommended for children.";
+                } else if (age >= 13 && age <= 18) {
+                    d += "\nThe recommended caffeine limit for teenagers is " + age*10 +" mg per day.";
+                } else if (age >= 19) {
+                    d += "\nThe recommended caffeine limit for adults is"+ age*10 +"mg per day.";
+                } else {
+                    document.getElementById("sp").innerHTML="invalid age";
+                }
+
+                // Display result in the textarea
+                document.getElementById("show").value = d;
+            }
+        </script>
+    </body>
+</html>
