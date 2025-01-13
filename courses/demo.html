@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="../courses/recipes/recipesstyling.css">
+        <title>About us</title>
+        <style>
+            td{
+                padding: 50px;
+            }
+            p.c{
+                font-size: 30px;
+                text-align: center;
+                margin: 10px;
+            } 
+            table{
+                margin-left: 300px;
+            }
+            #box2{
+                margin: -10px;
+                background-color: #ffffff ;
+                width: 240px;
+                height: 300px;
+                border-radius: 8px;
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <h2 class="beanary">Beanary       
+            <a href="../home/home.html" class="nav" style="margin-left: 780px; font-size: 20px;">Home</a>
+            <a href="../courses/courses.html" class="nav" style="margin-left: 20px; font-size: 20px;">Courses</a>
+            <a href="../success story/success.html" class="nav" style="margin-left: 20px; font-size: 20px;">Success stories</a>
+            <a href="../contact us/contactus.html" class="nav" style="margin-left: 20px; font-size: 20px;">Contact us</a>
+            <a href="aboutus.html" class="nav" style="margin-left: 20px; font-size: 20px;">About us</a>
+            <a href="../library/library.html" class="nav" style="margin-left: 20px; font-size: 20px;">Library</a>
+            <a href="../form.html" class="nav" style="margin-left: 20px; font-size: 20px;">Form</a>
+        </h2>
+        </nav>
+        <div style="padding-bottom: 50px;">
+            <h3 style="font-size: 60px; text-align: center;">Our story</h3>
+            <p class="c">Our story began four months ago when we were thinking
+            <br>about enrolling in the web development course for the new
+            <br> semester at university. My friends and I decided to take it
+            <br> together in the same section. When we enrolled, we found out
+            <br>that the midterm was a project, and we were already aware of
+            <br> this, so we decided to form a team. We came up with an 
+            <br>amazing idea, and after a week, we started designing to finish
+            <br>everything, we scored a 30.</p> 
+        </div>
+        <div style="background-color: #E3DCD4; padding-top: 5px; margin: 0 -10px;">
+            <h3 style="font-size: 60px; text-align: center;">Our Team</h3>
+            <table style="margin-left: 270px;">
+                <tr>
+                    <td>
+                        <div id="box2">
+                            <img src="../home/profile.jpeg" width="240" height="180" style="border-radius: 8px;">
+                            <h4 style="color: #322826; background-color: white; text-align: center;">
+                                Deema Mohsin
+                                <br>Computer Science
+                                <br>2nd year
+                            </h4>
+                        </div>   
+                    </td>
+                    <td>
+                        <div id="box2">
+                            <img src="../home/profile.jpeg" width="240" height="180" style="border-radius: 8px;">
+                            <h4 style="color: #322826; background-color: white; text-align: center;">
+                                Reema Abu-Asbeh
+                                <br>Software Engineering
+                                <br>2nd year
+                            </h4>
+                        </div>   
+                    </td>
+                    <td>
+                        <div id="box2">
+                            <img src="../home/profile.jpeg" width="240" height="180" style="border-radius: 8px;">
+                            <h4 style="color: #322826; background-color: white; text-align: center;">
+                                Sara Sarhan
+                                <br>Cybersecurity and Cloud Computing
+                                <br>2nd year
+                            </h4>
+                        </div>   
+                    </td>   
+                </tr> 
+            </table>
+        </div>
+        <h3 style="font-size: 60px; text-align: center;">Our Teammates LinkedIn</h3>
+        <div>
+            <table>
+                <td>
+                    <img src="linkedin.jpeg" width="200" height="200">
+                </td>
+                <td>
+                    <div>
+                        <p class="c" style="text-align: left;">Deema:<a href="https://www.linkedin.com/in/deemamohsin" target="_blank">Deema Mohsin</a></p>
+                        <p class="c" style="text-align: left;">Reema:<a href="https://www.linkedin.com/in/reema-abuasbeh-b239162aa?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">Reema Abuasbeh</a></p>
+                        <p class="c" style="text-align: left;">Sara:<a href="https://www.linkedin.com/in/sara-sarhan-04962b2ab?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">Sara Sarhan</a></p>
+                    </div>
+                </td>
+            </table>
+        </div>
+        <p class="copy_right">All rights are to Beanary owners</p>    
+        <script>
+            arrDrinks=["Latte" , "Iced coffee" , "Mocha"];
+            var d="Some recommended drinks for you: ";
+            function tasks()
+            {
+                opt=document.getElementById("drink").value;
+                var i;
+                for(i=0;i<arrDrinks.length;i++)
+                {
+                    if(opt==arrDrinks[0])
+                    {
+                        d+="Latte, Salted caramel latte, Biscuit iced latte.";
+                    }
+                    else if(opt==arrDrinks[1])
+                    {
+                        d+="Banana iced coffee, cacao iced coffee, Sweet iced coffee.";
+                    }
+                    else if(opt==arrDrinks[2])
+                    {
+                        d+="Black cacao mocha, Caramel iced mocha, Cookies and cream mocha, Pistachio mocha.";
+                    }
+                }
+                var caffeineLimit;
+                var age = document.getElementById("Age").value;
+                if (age >= 5 && age <= 12)
+                {
+                    caffeineLimit= "Caffeine is not recommended for children.";
+                }
+                else if (age >= 13 && age <= 18)
+                {
+                    caffeineLimit= "The recommended caffeine limit for teenagers is 100 mg per day.";
+                }
+                else if (age >= 19)
+                {
+                    caffeineLimit= "The recommended caffeine limit for adults is 400 mg per day.";
+                }
+                else
+                {
+                    caffeineLimit= "Sorry, the age you entered is not valid.";
+                }
+                document.getElementById("show").innerHTML=caffeineLimit+"\n"+d;
+            }
+        </script>
+    </body>
+</html>

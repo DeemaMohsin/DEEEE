@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Contact us</title>
+        <link rel="stylesheet" href="../courses/recipes/recipesstyling.css">
+        <style>
+            body{
+                color: #322826;
+            }
+            .f1{
+                background-color: #E3DCD4;
+                border-radius: 8px;
+                border-color: rgb(211, 195, 161);
+                border-style: solid;
+                padding: 15px 30px 30px 30px;
+                margin: 10px 300px 30px 300px;
+                text-align: left;
+            }
+            .f2{
+                text-align: center;
+                margin: 0px 500px 100px;
+            }
+            .stars {
+                font-size: 18px;
+                color: goldenrod;
+            }
+            button{
+                color: #322826;
+                border:2px solid rgb(211, 195, 161);
+                border-radius: 8px; 
+                background-color: #d8c8b0; 
+                padding: 3px 5px; 
+                margin-left: 90px;
+            }
+            button:hover{
+                background-color: rgb(211, 195, 161);
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <h2 class="beanary">Beanary       
+            <a href="../home/home.html" class="nav" style="margin-left: 720px; font-size: 20px;">Home</a>
+            <a href="../courses/courses.html" class="nav" style="margin-left: 20px; font-size: 20px;">Courses</a>
+            <a href="../success story/success.html" class="nav" style="margin-left: 20px; font-size: 20px;">Success stories</a>
+            <a href="contactus.html" class="nav" style="margin-left: 20px; font-size: 20px;">Contact us</a>
+            <a href="../about us/aboutus.html" class="nav" style="margin-left: 20px; font-size: 20px;">About us</a>
+            <a href="../library/library.html" class="nav" style="margin-left: 20px; font-size: 20px;">Library</a>
+            <a href="../form.html" class="nav" style="margin-left: 20px; font-size: 20px;">Form</a>
+        </h2>
+        </nav>
+        <br>
+        <h3 style="font-size: 60px; text-align: center;">Contact Us</h3>
+        <form method="post">
+        <fieldset class="f1">
+            <legend><b><h2>Leave us a message</h2></b></legend>
+                <strong style="margin-left: 90px;">First Name</strong>
+                <br>
+                <input type="text" name="fname" required style="padding-right: 490px; margin-left: 90px;">
+                <br><br>
+                <strong style="margin-left: 90px;">Last Name</strong>
+                <br>
+                <input type="text" name="lname" required style="padding-right: 490px; margin-left: 90px;">
+                <br><br>
+                <strong style="margin-left: 90px;">Gender</strong>
+                <br>
+                <input type="radio" name="rad" value="female" checked style="margin-left: 90px; color: #322826;">Female
+                <input type="radio" name="rad" value="male" style="color: #322826;">Male
+                <br><br>
+                <strong style="margin-left: 90px;">Select Your Country</strong>
+                <br>
+                <datalist id="cou">
+                    <option value="Jordan">
+                    <option value="Palestine">
+                    <option value="Saudi Arabia">
+                    <option value="Lebanon">
+                </datalist>
+                <input list="cou" value="Jordan" style="padding-right: 490px ; margin-left: 90px;">
+                <br><br>
+                <strong style="margin-left: 90px;">Rate us</strong>
+                <p class="stars" style="margin-left: 90px; margin-top: 3px;">☆☆☆☆☆</p>
+                <strong style="margin-left: 90px;">Comment</strong>
+                <br>
+                <textarea name="txt" rows="8" cols="88" style="margin-left: 90px;">Write here</textarea>
+                <br><br>
+                <button type="submit" value="Send">Send</button>
+        </fieldset>
+        </form>
+        <br><br>
+        <fieldset class="f2">
+            <legend><b><h2>Contact Us</h2></b></legend>
+            <table style="width: 100%; margin-bottom: 20px;">
+                <tr>
+                    <td style="text-align: center;">
+                        <a href="https://mail.google.com/mail/u/0/" class="social" target="_blank"><img src="gmail.jpeg" alt="#" width="130" height="120"></a>
+                    </td>
+                    <td style="text-align: center;">
+                        <a href="https://www.instagram.com/bean_ary?igsh=MTlnYmR3M3p0eGFqbw==" class="social" target="_blank"><img src="instgram.jpeg" alt="#" width="130" height="120"></a>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+        <p class="copy_right">All rights are to Beanary owners</p>  
+    </body>
+</html>
